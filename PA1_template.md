@@ -37,7 +37,7 @@ data_steps_per_day <- data %>% group_by(date) %>% summarize(steps_per_day = sum(
 hist(data_steps_per_day$steps_per_day, xlab = "steps/day", main = "steps/day")
 ```
 
-![](PA1_template_files/figure-html/data processing-1.png)<!-- -->
+![](PA1_template_files/figure-html/data_processing-1.png)<!-- -->
 
 
 ```r
@@ -84,7 +84,7 @@ ggplot(data = data_steps_per_interval, aes( x = interval, y = avg_steps_per_inte
         theme_bw()
 ```
 
-![](PA1_template_files/figure-html/time series-1.png)<!-- -->
+![](PA1_template_files/figure-html/time_series-1.png)<!-- -->
 
 ## 5 minute interval with maximum number of steps on average:
 
@@ -141,7 +141,7 @@ data_imputed_steps_per_day <- data_imputed %>% group_by(date) %>% summarize(step
 hist(data_imputed_steps_per_day$steps_per_day, xlab = "steps/day", main = "steps/day (missing values imputed)")
 ```
 
-![](PA1_template_files/figure-html/histogram and mean median woth imputed data-1.png)<!-- -->
+![](PA1_template_files/figure-html/histogram_and_mean_median_with_imputed_data-1.png)<!-- -->
 
 
 ```r

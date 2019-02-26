@@ -31,7 +31,7 @@ data <- transform(data, date = as.Date(date, "%Y-%m-%d")) # transform date to Da
 
 ## steps taken per day: histogram, mean and median
 
-```{r data processing}
+```{r data_processing}
 
 
 
@@ -50,7 +50,7 @@ median(data_steps_per_day$steps_per_day, na.rm = TRUE)
 
 ## steps taken per day: time series plot
 
-```{r time series}
+```{r time_series}
 
 data_steps_per_interval <- data %>% group_by(interval) %>% summarize(avg_steps_per_interval = mean(steps, na.rm = TRUE))
 
@@ -97,7 +97,7 @@ for (i in 1:nrow(data)){   # iterrating through all rows
 
 ## steps taken per day with imputed values: histogram, mean and median
 
-```{r histogram and mean median woth imputed data}
+```{r histogram_and_mean_median_with_imputed_data}
 
 data_imputed_steps_per_day <- data_imputed %>% group_by(date) %>% summarize(steps_per_day = sum(steps))
 
